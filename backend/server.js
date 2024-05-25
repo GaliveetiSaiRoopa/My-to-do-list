@@ -17,6 +17,10 @@ mongoose.set('strictQuery', true);
 app.use(express.json())
 app.use(cors())
 
+
+console.log('MONGO_URI:', process.env.MONGO_URI); // Add this line to ensure MONGO_URI is loaded correctly
+console.log('PORT:', process.env.PORT);
+
 //db config
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
